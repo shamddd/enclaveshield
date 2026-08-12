@@ -1,0 +1,6 @@
+"ID","Title","Authors","Year","Venue","Problem","Method","Limitations","RelationToEnclaveShield"
+"oblivious2025","Making Your Program Oblivious","arXiv Authors",2025,"arXiv","TEE side-channel leakage","ORAM comparative analysis","High memory overhead","EnclaveShield introduces adaptive ORAM to cap overhead <15%"
+"sok2024","SoK: Attestation in Confidential Computing","SoK Authors",2024,"ResearchGate","Remote attestation survey","Quote verification taxonomy","Exposes measurement hashes","EnclaveShield provides Zero-Knowledge quote attestation"
+"snpeek2024","SNPeek: Side-Channel Analysis on Confidential VMs","NDSS Authors",2024,"NDSS","Confidential VM page leakage","Microarchitectural analysis","Attack only, no defense engine","EnclaveShield mitigates page-fault side channels"
+"xu2015controlled","Controlled-Channel Attacks on SGX","Xu et al.",2015,"IEEE S&P","Page fault side-channel attacks","Page fault sequence tracking","No defense proposed","EnclaveShield obfuscates page access sequences"
+"stefanov2013pathoram","Path ORAM: An Extremely Simple ORAM Protocol","Stefanov et al.",2013,"ACM CCS","Data access pattern leakage","Tree-based ORAM","Fixed 100x overhead","EnclaveShield adapts ORAM tree depth based on access frequency"
