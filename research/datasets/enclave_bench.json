@@ -1,0 +1,32 @@
+[
+  {
+    "id": "C01_S01",
+    "category": "C01_DirectMemoryInspection",
+    "measurement": "0x123456789abcdef0",
+    "page_sequence": [1, 2, 3, 4, 1, 2, 3, 4]
+  },
+  {
+    "id": "C02_S01",
+    "category": "C02_PageFaultAccessTrace",
+    "measurement": "0xabcdef0123456789",
+    "page_sequence": [0, 5, 10, 15, 0, 5, 10, 15]
+  },
+  {
+    "id": "C03_S01",
+    "category": "C03_ControlledCacheCollision",
+    "measurement": "0xfe9876543210dcba",
+    "page_sequence": [2, 4, 6, 8, 2, 4, 6, 8]
+  },
+  {
+    "id": "C04_S01",
+    "category": "C04_AttestationFingerprinting",
+    "measurement": "0x777788889999aaaa",
+    "page_sequence": [1, 1, 1, 1, 2, 2, 2, 2]
+  },
+  {
+    "id": "C05_S01",
+    "category": "C05_MultiTenantColocation",
+    "measurement": "0xbbbbccccddddeeee",
+    "page_sequence": [3, 7, 11, 14, 3, 7, 11, 14]
+  }
+]
