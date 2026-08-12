@@ -1,0 +1,10 @@
+services:
+  attestation-authority:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: attestation-authority
+    ports:
+      - "8000:8000"
+    environment:
+      - LOG_LEVEL=INFO
