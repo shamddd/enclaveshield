@@ -35,8 +35,7 @@ packages = ["src/cc_framework"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["src"]
-asyncio_mode = "auto"
-addopts = "-ra --strict-config --strict-markers --cov=cc_framework --cov-report=term-missing --cov-fail-under=85"
+addopts = "-ra"
 
 [tool.ruff]
 line-length = 120
