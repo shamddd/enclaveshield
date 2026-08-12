@@ -1,0 +1,18 @@
+\section{EnclaveShield Architecture}
+\label{sec:methodology}
+
+The EnclaveShield architecture protects enclave memory access patterns and attestation quotes.
+
+\subsection{Adaptive Dynamic ORAM Engine}
+Memory pages $P = \{p_1, \dots, p_N\}$ maintain access frequency counters $C(p_i)$. For each access, tree traversal depth is computed dynamically:
+\begin{align}
+    d(p_i) = \max\left(1, 5 - \lfloor\sqrt{C(p_i)}\rfloor\right)
+\end{align}
+Access latency scales as $T(p_i) = 0.5 \cdot d(p_i)\,\text{ms}$, reducing overhead for high-frequency pages.
+
+\subsection{Normalized Page Access Entropy}
+Side-channel leakage resistance is quantified via normalized Shannon entropy:
+\begin{align}
+    E_{\text{page}} = \frac{-\sum_{i} P(p_i) \log_2 P(p_i)}{\log_2 |P|}
+\end{align}
+where $E_{\text{page}} \to 1.0$ indicates maximum access obfuscation.

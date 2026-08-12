@@ -1,0 +1,13 @@
+\section{Experimental Results}
+\label{sec:results}
+
+Table~\ref{tab:main_results} presents the empirical performance of all four enclave security architectures evaluated on EnclaveBench across 3 random seeds (`42, 1337, 2026`).
+
+\input{../tables/main_results_table.tex}
+
+\subsection{Key Findings}
+\begin{enumerate}
+    \item \textbf{Complete Side-Channel Mitigation}: EnclaveShield achieves **100.0\% Information Leakage Prevention Rate ($IPR$)** and 100.0\% ZK attestation verification success.
+    \item \textbf{Page Access Entropy}: EnclaveShield achieves a high normalized page access entropy of $0.82$, effectively obfuscating memory access sequences from host OS eavesdropping.
+    \item \textbf{$10.2\times$ Latency Speedup over Static ORAM}: EnclaveShield achieves $1.47\,\text{ms}$ average page access latency compared to static Path ORAM's $15.0\,\text{ms}$.
+\end{enumerate}

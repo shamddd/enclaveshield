@@ -1,0 +1,20 @@
+\section{Experimental Setup & EnclaveBench}
+\label{sec:evaluation}
+
+\subsection{EnclaveBench Scenarios}
+We evaluate EnclaveShield on **EnclaveBench**, comprising 20 scenarios across 5 side-channel threat categories:
+\begin{enumerate}
+    \item \textbf{C01 (Direct Memory Inspection)}: Host OS physical RAM probing.
+    \item \textbf{C02 (Page-Fault Access Trace)}: OS page fault sequence tracking.
+    \item \textbf{C03 (Controlled Cache Collision)}: Flush+Reload cache timing.
+    \item \textbf{C04 (Attestation Fingerprinting)}: Attestation quote interception.
+    \item \textbf{C05 (Multi-Tenant Co-location)}: Cross-VM side-channel attacks.
+\end{enumerate}
+
+\subsection{Evaluated Baselines}
+\begin{itemize}
+    \item \textbf{B0 (Unprotected Host Process)}: Standard unencrypted binary.
+    \item \textbf{B1 (Standard SGX/TDX Enclave)}: Native SGX without ORAM.
+    \item \textbf{B2 (Static Path ORAM)}: Rigid full-depth Path ORAM.
+    \item \textbf{EnclaveShield (Proposed)}: Adaptive ORAM + ZK Attestation.
+\end{itemize}

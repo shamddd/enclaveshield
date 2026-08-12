@@ -1,0 +1,17 @@
+\section{Introduction}
+\label{sec:intro}
+
+Hardware enclaves (e.g. Intel SGX, Intel TDX, AMD SEV-SNP) provide strong hardware-rooted memory encryption and isolated execution environments \cite{costan2016intel}. These Trusted Execution Environments (TEEs) enable cloud customers to process sensitive workloads without trusting the underlying host operating system or cloud hypervisor.
+
+Despite hardware isolation guarantees, TEEs are vulnerable to deterministic side-channel attacks \cite{xu2015controlled, vanbulck2018foreshadow}. An untrusted host OS can monitor page-fault sequences to reconstruct secret data processing pipelines. Furthermore, traditional remote attestation schemes expose raw binary measurement hashes ($MRENCLAVE$), allowing malicious verifiers to fingerprint specific software versions.
+
+Existing side-channel mitigation frameworks rely on static Path ORAM schemes \cite{stefanov2013pathoram}. However, static tree traversals incur up to $100\times$ memory access overhead, rendering them impractical for production enclaves.
+
+To resolve these limitations, we introduce \textbf{EnclaveShield}, a confidential computing framework combining Zero-Knowledge Remote Attestation with an Adaptive Dynamic ORAM Page Obfuscator.
+
+Our primary contributions include:
+\begin{enumerate}
+    \item \textbf{Zero-Knowledge Remote Attestation Protocol}: Quote verification hiding raw binary measurement hashes.
+    \item \textbf{Adaptive Dynamic ORAM Engine}: Frequency-aware tree balancing reducing page traversal overhead by $10.2\times$.
+    \item \textbf{EnclaveBench Benchmark}: A 20-scenario benchmark evaluating 5 side-channel threat profiles across 3 random seeds.
+\end{enumerate}
