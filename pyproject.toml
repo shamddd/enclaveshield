@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "confidential-computing-research-framework"
+version = "1.0.0"
+description = "Production-grade Confidential Computing research & engineering framework for TEE attestation, policy verification, and secure workload runtime"
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Sham Satish Thakare" }]
+dependencies = [
+  "cryptography>=42.0.0",
+  "fastapi>=0.110.0",
+  "pydantic>=2.6.0",
+  "pydantic-settings>=2.2.0",
+  "python-multipart>=0.0.9",
+  "uvicorn>=0.28.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx>=0.27.0",
+  "mypy>=1.9.0",
+  "pytest>=8.1.0",
+  "pytest-asyncio>=0.23.0",
+  "pytest-cov>=4.1.0",
+  "ruff>=0.3.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/cc_framework"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+addopts = "-ra --strict-config --strict-markers --cov=cc_framework --cov-report=term-missing --cov-fail-under=85"
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "SIM"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["cc_framework"]
+mypy_path = "src"
