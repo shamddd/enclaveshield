@@ -1,0 +1,6 @@
+EnclaveBench IPR vs Latency Summary
+-------------------------------------
+B0_Unprotected: IPR=0.0% | Entropy=0.2 | Latency=0.1ms
+B1_StandardSGX: IPR=0.0% | Entropy=0.2 | Latency=0.2ms
+B2_StaticPathORAM: IPR=0.0% | Entropy=1.0 | Latency=15.0ms
+EnclaveShield: IPR=100.0% | Entropy=0.82 | Latency=1.47ms

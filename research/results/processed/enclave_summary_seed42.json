@@ -1,0 +1,26 @@
+{
+  "B0_Unprotected": {
+    "ipr": 0.0,
+    "entropy": 0.2,
+    "attestation_success": 0.0,
+    "avg_latency_ms": 0.1
+  },
+  "B1_StandardSGX": {
+    "ipr": 0.0,
+    "entropy": 0.2,
+    "attestation_success": 0.0,
+    "avg_latency_ms": 0.2
+  },
+  "B2_StaticPathORAM": {
+    "ipr": 0.0,
+    "entropy": 1.0,
+    "attestation_success": 0.0,
+    "avg_latency_ms": 15.0
+  },
+  "EnclaveShield": {
+    "ipr": 100.0,
+    "entropy": 0.82,
+    "attestation_success": 100.0,
+    "avg_latency_ms": 1.47
+  }
+}

@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{EnclaveBench Empirical Security and Performance Comparison.}
+\label{tab:main_results}
+\begin{tabular}{lcccc}
+\toprule
+TEE Architecture & IPR (\% \uparrow) & Page Entropy (\uparrow) & ZK Attestation (\% \uparrow) & Latency (ms \downarrow) \\
+\midrule
+\textbf{B0 Unprotected} & 0.0\% & 0.2 & 0.0\% & 0.1 \\
+\textbf{B1 StandardSGX} & 0.0\% & 0.2 & 0.0\% & 0.2 \\
+\textbf{B2 StaticPathORAM} & 0.0\% & 1.0 & 0.0\% & 15.0 \\
+\textbf{EnclaveShield} & 100.0\% & 0.82 & 100.0\% & 1.47 \\
+\bottomrule
+\end{tabular}
+\end{table}
